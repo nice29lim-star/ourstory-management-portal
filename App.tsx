@@ -24,7 +24,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-bg-light font-sans text-text-main min-h-screen flex flex-col">
+    <div className={`bg-bg-light font-sans text-text-main flex flex-col ${selectedApp ? 'h-screen' : 'min-h-screen'}`}>
       <Header showHomeButton={!!selectedApp} onGoHome={handleGoHome} />
 
       {selectedApp ? (
